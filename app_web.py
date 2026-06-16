@@ -20,12 +20,12 @@ st.set_page_config(
 st.title("📊 Gestor Square - Relatórios Web")
 
 # 🗨️ Adicione um logo (opcional, se tiver um arquivo logo.png no GitHub)
-from PIL import Image
-try:
-logo = Image.open("logo.png") # 🗨️ Assumindo que você tem uma pasta assets
-st.image(logo, width=100)
-except FileNotFoundError:
-st.warning("Logo não encontrado em 'assets/logo.png'.")
+# from PIL import Image
+# try:
+# logo = Image.open("logo.png") # 🗨️ Assumindo que você tem uma pasta assets
+# st.image(logo, width=100)
+# except FileNotFoundError:
+# st.warning("Logo não encontrado em 'assets/logo.png'.")
 
 # ============================================================
 # FUNÇÕES AUXILIARES (do seu tela_relatorios.py)
