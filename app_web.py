@@ -39,11 +39,6 @@ def _buscar_dados_geral(data_ref):
     dados_para_df = []
     data_ref_bd = data_ref.strftime("%Y-%m-%d")
 
-    # 🗨️ Verifica se o arquivo do banco existe
-    if not os.path.exists("gestor_square.db"):
-        st.error("Arquivo do banco de dados 'gestor_square.db' não encontrado!")
-        return pd.DataFrame(columns=["Nome do Fundo", "Data da Cota", "Var. Dia", "Var. Mês", "Var. Ano"])
-
     conn   = conectar()
     cursor = conn.cursor()
     cursor.execute("SELECT id, nome FROM fundos WHERE ativo = 1 ORDER BY nome")
