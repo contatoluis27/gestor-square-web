@@ -9,10 +9,23 @@ import os # 🗨️ Para verificar se o arquivo do banco existe
 # ============================================================
 # CONFIGURAÇÃO INICIAL DO STREAMLIT
 # ============================================================
-st.set_page_config(layout="wide", page_title="Gestor Square Web")
+st.set_page_config(
+    page_title="Gestor Square Web",
+    page_icon="📊", # 🗨️ Ícone que aparece na aba do navegador
+    layout="wide",   # 🗨️ Usa a largura total da tela
+    initial_sidebar_state="expanded" # 🗨️ Barra lateral expandida por padrão
+)
 
-# 🗨️ Título principal do aplicativo
+# 🗨️ Adicione um título principal com um ícone
 st.title("📊 Gestor Square - Relatórios Web")
+
+# 🗨️ Adicione um logo (opcional, se tiver um arquivo logo.png no GitHub)
+from PIL import Image
+try:
+logo = Image.open("logo.png") # 🗨️ Assumindo que você tem uma pasta assets
+st.image(logo, width=100)
+except FileNotFoundError:
+st.warning("Logo não encontrado em 'assets/logo.png'.")
 
 # ============================================================
 # FUNÇÕES AUXILIARES (do seu tela_relatorios.py)
