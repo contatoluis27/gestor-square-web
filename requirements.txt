@@ -1,0 +1,7 @@
+streamlit
+pandas
+matplotlib
+# Se você usa CustomTkinter em outras partes do projeto, não precisa listar aqui,
+# pois ele é para desktop e não será usado no app web.
+# Se você tiver outras bibliotecas que usa no database.py ou em outras funções
+# que migrar para o app_web.py, liste-as aqui.
